@@ -13,19 +13,16 @@ module.exports = yeoman.Base.extend({
       'Welcome to the posh ' + chalk.red('generator-koa-reflux') + ' generator!'
     ));
 
-    var prompts = [{
+    this.prompt([{
       type: 'input',
       name: 'appName',
       message: 'Your Appname?',
       default: this.appname
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      // To access props later use this.props.someAnswer;
-
-      done();
+    }], function(ans) {
+      this.appName  = ans.appName;
+      done()
     }.bind(this));
+
   },
 
   writing: function () {
@@ -63,6 +60,19 @@ module.exports = yeoman.Base.extend({
       this.templatePath('public'),
       this.destinationPath('public')
     )
+
+    this.fs.copy(
+      this.templatePath('server/resources/root/root.controller.js'),
+      this.destinationPath('server/resources/root/root.controller.js'), {
+        process: function(input) {
+          var output = input.toString('utf-8')
+                .replace('{{API_NAME}}', this.appName)
+                .replace('{{API_INFO}}', this.appName)
+          return output
+        }.bind(this)
+      }
+    );
+
   },
 
   install: function () {
