@@ -1,0 +1,17 @@
+{
+  "name": "Koa-RESTful-API",
+  "description": "",
+  "main": "server/server.js",
+  "authors": [
+    "edward32tnt <edward32tnt@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

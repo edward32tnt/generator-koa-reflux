@@ -14,10 +14,10 @@ module.exports = yeoman.Base.extend({
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'input',
+      name: 'appName',
+      message: 'Your Appname?',
+      default: this.appname
     }];
 
     this.prompt(prompts, function (props) {
@@ -30,9 +30,39 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('package.json'),
+      this.destinationPath('package.json')
     );
+
+    this.fs.copy(
+      this.templatePath('gulpfile.js'),
+      this.destinationPath('gulpfile.js')
+    );
+
+    this.fs.copy(
+      this.templatePath('.gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    this.fs.copy(
+      this.templatePath('webpack.config.js'),
+      this.destinationPath('webpack.config.js')
+    );
+
+    this.fs.copy(
+      this.templatePath('server'),
+      this.destinationPath('server')
+    );
+
+    this.fs.copy(
+      this.templatePath('client'),
+      this.destinationPath('client')
+    )
+
+    this.fs.copy(
+      this.templatePath('public'),
+      this.destinationPath('public')
+    )
   },
 
   install: function () {
