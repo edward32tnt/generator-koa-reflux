@@ -16,6 +16,13 @@ Then generate your new project:
 yo koa-reflux
 ```
 
+development run:
+
+```bash
+gulp
+```
+
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
