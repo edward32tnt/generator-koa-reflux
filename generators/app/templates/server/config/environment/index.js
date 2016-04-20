@@ -8,7 +8,7 @@ var base = {
   env: process.env.NODE_ENV,
   root: path.normalize(__dirname + '/../../..'),
   port: process.env.PORT || 9000,
-  logType : 'dev'
+  logType : 'debug'
 };
 
 
