@@ -11,7 +11,7 @@
   "files": [
     "generators/app"
   ],
-  "main": "generators/index.js",
+  "main": "generators/app/index.js",
   "keywords": [
     "yeoman-generator"
   ],
@@ -24,7 +24,7 @@
     "yeoman-test": "^1.0.0",
     "yeoman-assert": "^2.0.0",
     "eslint": "^2.1.0",
-    "eslint-config-xo-space": "^0.10.0",
+    "eslint-config-xo-space": "^0.12.0",
     "gulp": "^3.9.0",
     "gulp-eslint": "^2.0.0",
     "gulp-exclude-gitignore": "^1.0.0",

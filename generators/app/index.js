@@ -73,7 +73,6 @@ module.exports = yeoman.Base.extend({
       }
     );
 
-    done();
   },
 
   install: function () {

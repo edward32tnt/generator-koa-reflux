@@ -5,11 +5,11 @@
 'use strict';
 
 var config = require('./environment');
-var morgan = require('koa-morgan');
+var logger = require('koa-logger');
 
 module.exports = function(app) {
 
    // Logger
-   app.use(morgan.middleware(config.logType));
+   app.use(logger());
 
 };
