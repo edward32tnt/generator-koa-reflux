@@ -28,7 +28,13 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     this.fs.copy(
       this.templatePath('package.json'),
-      this.destinationPath('package.json')
+      this.destinationPath('package.json'), {
+        process: function(input) {
+          var output = input.toString('utf-8')
+                .replace('{{API_NAME}}', this.appName)
+          return output
+        }.bind(this)
+      }
     );
 
     this.fs.copy(

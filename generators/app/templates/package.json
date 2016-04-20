@@ -1,5 +1,5 @@
 {
-  "name": "Koa-RESTful-API",
+  "name": "{{API_NAME}}",
   "version": "0.0.1",
   "main": "server/server.js",
   "dependencies": {
