@@ -1,6 +1,6 @@
 {
   "name": "generator-koa-reflux",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "koa-rest+gulp+webpack+browseSync+react+reflux",
   "homepage": "",
   "author": {
