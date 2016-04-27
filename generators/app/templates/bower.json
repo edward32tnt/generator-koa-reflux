@@ -1,5 +1,5 @@
 {
-  "name": "Koa-RESTful-API",
+  "name": "{{API_NAME}}",
   "description": "",
   "main": "server/server.js",
   "authors": [

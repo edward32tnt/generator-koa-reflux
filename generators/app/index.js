@@ -53,6 +53,17 @@ module.exports = yeoman.Base.extend({
     );
 
     this.fs.copy(
+      this.templatePath('bower.json'),
+      this.destinationPath('bower.json'), {
+        process: function(input) {
+          var output = input.toString('utf-8')
+                .replace('{{API_NAME}}', this.appName)
+          return output
+        }.bind(this)
+      }
+    );
+
+    this.fs.copy(
       this.templatePath('server'),
       this.destinationPath('server')
     );
