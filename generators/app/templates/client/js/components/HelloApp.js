@@ -1,5 +1,5 @@
 import React, {PropTypes, Component} from 'react';
-import ReactRouter from 'react-router';
+import {Link, IndexLink} from 'react-router';
 
 import Refux from 'reflux';
 
@@ -37,6 +37,8 @@ class HelloApp extends Component {
     return (
       <div>
         HelloApp
+        <IndexLink to="/" activeStyle={{color:'blue'}}>Home</IndexLink>
+        <Link to="/aboutapp" activeStyle={{color:'blue'}}>About</Link>
         <button onClick={this._handleAdd.bind(this)}>add</button>
         <button onClick={this._handleRemove.bind(this)}>remove</button>
         {items}
